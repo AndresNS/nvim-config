@@ -10,7 +10,7 @@
 -- nvim-lspconfig: Sets up the communication between neovim and language servers and allow us to set keybinding for LSP actions
 -- https://github.com/neovim/nvim-lspconfig
 
-local language_servers = { "lua_ls", "html", "tsserver", "angularls", "ruby_ls", "tailwindcss" }
+local language_servers = { "lua_ls", "html", "tsserver", "angularls", "ruby_lsp", "tailwindcss" }
 
 return {
   {
