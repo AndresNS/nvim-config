@@ -10,7 +10,7 @@
 -- nvim-lspconfig: Sets up the communication between neovim and language servers and allow us to set keybinding for LSP actions
 -- https://github.com/neovim/nvim-lspconfig
 
-local language_servers = { "lua_ls", "html", "tsserver", "angularls", "ruby_lsp", "tailwindcss" }
+local language_servers = { "lua_ls", "html", "ts_ls", "angularls", "ruby_lsp", "tailwindcss" }
 
 return {
   {
@@ -37,7 +37,7 @@ return {
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
         vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-        vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+        vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
       end
 
       local lspconfig = require("lspconfig")
@@ -46,7 +46,7 @@ return {
       for _, server_name in ipairs(language_servers) do
         lspconfig[server_name].setup({
           on_attach = on_attach,
-          capabilities = capabilities
+          capabilities = capabilities,
         })
       end
     end,

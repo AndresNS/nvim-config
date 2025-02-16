@@ -8,15 +8,43 @@ This document serves as a guide to my Neovim configuration, including keybinding
 
 1. [Installation](#installation)
 2. [Keybindings](#keybindings)
-3. [Theme and Appearance](#theme-and-appearance)
-4. [LSP and Code Features](#lsp-and-code-features)
-5. [Troubleshooting and Notes](#troubleshooting-and-notes)
+   <!-- 3. [Theme and Appearance](#theme-and-appearance) -->
+   <!-- 4. [LSP and Code Features](#lsp-and-code-features) -->
+   <!-- 5. [Troubleshooting and Notes](#troubleshooting-and-notes) -->
 
 ---
 
 ## Installation
 
-1. **Clone Configuration Repository**
+### Install Neovim
+
+Import Neovim stable PPA:
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/stable -y
+```
+
+Import Neovim unstable PPA:
+
+```bash
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+```
+
+Next, update your package index to include the newly added PPA:
+
+```bash
+sudo apt update
+```
+
+Now, you can proceed to install Neovim using the following command:
+
+```bash
+sudo apt install neovim
+```
+
+### Clone Configuration Repository
+
+Clone this repository:
 
 ```bash
 git clone <your-repo-url> ~/.config/nvim
